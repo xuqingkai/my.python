@@ -1,9 +1,10 @@
 from bottle import route, run, template
 
-from test import test0
+
 from test1 import test11
 from test2 import test21
-from test.test4 import test4
+from test import test4
+from test.test5 import test55
 
 @route('/')
 def index():
@@ -17,10 +18,7 @@ def hello(name):
 def nihao(name):
     return template('<b>Nihao {{name}}</b>!', name=name)
 
-@route('/test0')
-def test_test0_test00_test000():
-    test_value=test0.test000()
-    return test_value
+
 
 @route('/test1')
 def test1_test11_test111():
@@ -40,6 +38,12 @@ def test2_test21():
 @route('/test4')
 def test_test4_test44_test441():
     test_value=test4.test441()
+    return test_value
+
+
+@route('/test5')
+def test_test5_test55_test551():
+    test_value=test55.test551()
     return test_value
     
 run(host='0.0.0.0', port=8088)
