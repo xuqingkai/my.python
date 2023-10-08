@@ -1,7 +1,7 @@
 from bottle import route, run, template
 
 from test1 import test11
-from test2 import test211
+from test2 import test221
 from test import test4
 from test.test5 import test55
 
@@ -29,9 +29,9 @@ def test1_test11_test112():
     test_value=test11.test112()
     return test_value
     
-@route('/test211')
-def test2_test211():
-    test_value=test211()
+@route('/test221')
+def test2_test221():
+    test_value=test221()
     return test_value
 
 @route('/test441')
