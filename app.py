@@ -2,7 +2,7 @@ from bottle import route, run, template
 
 
 from test1 import test11
-from test2 import test21
+from test2 import test211
 from test import test4
 from test.test5 import test55
 
@@ -20,28 +20,28 @@ def nihao(name):
 
 
 
-@route('/test1')
+@route('/test111')
 def test1_test11_test111():
     test_value=test11.test111()
     return test_value
     
-@route('/test12')
+@route('/test112')
 def test1_test11_test112():
     test_value=test11.test112()
     return test_value
     
-@route('/test2')
-def test2_test21():
-    test_value=test21()
+@route('/test211')
+def test2_test211():
+    test_value=test221()
     return test_value
 
-@route('/test4')
-def test_test4_test44_test441():
+@route('/test441')
+def test_test4_test441():
     test_value=test4.test441()
     return test_value
 
 
-@route('/test5')
+@route('/test551')
 def test_test5_test55_test551():
     test_value=test55.test551()
     return test_value
